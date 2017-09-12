@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xe.demo.mapper.SupplierContactsMapper">
+  <resultMap id="BaseResultMap" type="com.xe.demo.model.SupplierContacts">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="dept" jdbcType="VARCHAR" property="dept" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="fax" jdbcType="VARCHAR" property="fax" />
+    <result column="home_tel" jdbcType="VARCHAR" property="homeTel" />
+    <result column="unit_tel" jdbcType="VARCHAR" property="unitTel" />
+    <result column="qq_wx" jdbcType="VARCHAR" property="qqWx" />
+    <result column="zipcode" jdbcType="VARCHAR" property="zipcode" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="master_id" jdbcType="INTEGER" property="masterId" />
+  </resultMap>
+</mapper>

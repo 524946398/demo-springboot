@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xe.demo.mapper.SupplierMasterMapper">
+	<resultMap id="BaseResultMap" type="com.xe.demo.model.SupplierMaster">
+		<id column="id" jdbcType="INTEGER" property="id" />
+		<result column="unit_code" jdbcType="VARCHAR" property="unitCode" />
+		<result column="unit_name" jdbcType="VARCHAR" property="unitName" />
+		<result column="master_contacts" jdbcType="VARCHAR" property="masterContacts" />
+		<result column="master_phone" jdbcType="VARCHAR" property="masterPhone" />
+		<result column="master_fax" jdbcType="VARCHAR" property="masterFax" />
+		<result column="master_mail" jdbcType="VARCHAR" property="masterMail" />
+		<result column="foller_persion" jdbcType="VARCHAR" property="follerPersion" />
+	</resultMap>
+	
+	<select id="queryByUsername" resultMap="BaseResultMap">
+		select
+			v.id "id",
+			v.unit_code "unitCode",
+			v.unit_name "unitName",
+			v.master_contacts "masterContacts",
+			v.master_fax "masterFax",
+			v.master_mail "masterMail",
+			v.master_phone "masterPhone"
+			from supplier_master v
+		where v.unit_name = #{unitName}
+	</select>
+</mapper>
